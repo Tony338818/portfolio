@@ -28,7 +28,7 @@ function Project() {
         "Structured storage for users, orders, and chat history",
       ],
       tech_stack: ["Python", "FastAPI", "PostgreSQL", "Twilio", "Gemini API"],
-      github_link: "https://github.com/yourusername/tradeaid",
+      github_link: "https://github.com/Tony338818/BOSS/tree/development",
       live_link: "https://tradeaid-demo.com",
     },
 
@@ -56,25 +56,6 @@ function Project() {
     },
 
     {
-      image: "/project3.png",
-      images: ["/project3.png"],
-      title: "Flutter Bookstore App",
-      subtitle:
-        "A full-stack e-commerce mobile application with admin panel, real-time database sync, and advanced search/filtering.",
-      readme:
-        "A production-style mobile bookstore built with Flutter and Firebase. It includes user authentication, book discovery, cart functionality, and an admin dashboard for managing inventory. Firestore enables real-time updates across users.",
-      highlights: [
-        "User authentication, cart system, and order management",
-        "Admin dashboard for managing books and inventory",
-        "Search and filtering by price, category, and release date",
-        "Efficient state management with real-time updates",
-      ],
-      tech_stack: ["Flutter", "Firebase", "Firestore", "REST APIs"],
-      github_link: "https://github.com/yourusername/flutter-bookstore",
-      live_link: "",
-    },
-
-    {
       image: miniapiimg,
       images: [miniapiimg1, miniapiimg2, miniapiimg3],
       title: "Mini Banking API",
@@ -89,7 +70,7 @@ function Project() {
         "API documentation ready for Postman/Swagger integration",
       ],
       tech_stack: ["Python", "FastAPI", "PostgreSQL", "JWT"],
-      github_link: "https://github.com/yourusername/banking-api",
+      github_link: "https://github.com/Tony338818/mini-bank-api",
       live_link: "",
     },
   ];
