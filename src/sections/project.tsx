@@ -1,11 +1,13 @@
 import ProjectCard from "../components/project_card";
-import tradeaidimg from "../assets/tradeaid_1.png";
-import botnovaimg from "../assets/botnova_1.png";
 import ProjectModal from "../components/project_modal";
+import tradeaidimg from "../assets/tradeaid_1.png";
+import tradeaidimg1 from "../assets/tradeaid_3.png";
 import miniapiimg from "../assets/mini_api.png";
 import miniapiimg1 from "../assets/mini_api_1.png";
 import miniapiimg2 from "../assets/mini_api_2.png";
 import miniapiimg3 from "../assets/mini_api_3.png";
+import church from '../assets/church.png'
+import church1 from '../assets/church_1.png'
 import { useState } from "react";
 
 function Project() {
@@ -15,7 +17,7 @@ function Project() {
   const projects = [
     {
       image: tradeaidimg,
-      images: [tradeaidimg, botnovaimg],
+      images: [tradeaidimg1, tradeaidimg],
       title: "TradeAid",
       subtitle:
         "AI-powered WhatsApp business assistant that automates customer support, order handling, and business workflows in real-time.",
@@ -33,8 +35,8 @@ function Project() {
     },
 
     {
-      image: botnovaimg,
-      images: [botnovaimg],
+      image: church,
+      images: [church, church1],
       title: "Church Admin & Communication System",
       subtitle:
         "A centralized admin platform for managing church members and enabling real-time mass communication at scale.",

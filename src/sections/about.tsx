@@ -1,5 +1,6 @@
 import aboutImg from "../assets/me.jpg";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import cv from '../assets/Chidubem I.pdf'
 
 function About() {
   return (
@@ -68,9 +69,9 @@ function About() {
             </div>
 
             {/* BUTTON */}
-            <button className="cv-btn">
-              Download CV <span>→</span>
-            </button>
+            <a href={cv} target="_blank" rel="noreferrer">
+              <button className="resume">Download CV <span>→</span></button>
+            </a>
           </div>
         </div>
       </div>
