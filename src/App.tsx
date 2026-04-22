@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/navbar";
 import About from "./sections/about";
 import Contact from "./sections/contact";
 import Footer from "./sections/footer";
@@ -9,6 +10,7 @@ import Project from "./sections/project";
 function App() {
   return (
     <div>
+      <Navbar />
       <Hero />
       <About />
       <Journey />

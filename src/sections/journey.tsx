@@ -45,11 +45,11 @@ function Journey() {
               <h2>Work Experience</h2>
             </div>
 
-            <div className="item">
+            {/* <div className="item">
               <span className="date">Jan 2026 – Present</span>
               <h3>Software Engineer</h3>
               <p>Isometry Studios · London, UK</p>
-            </div>
+            </div> */}
 
             <div className="item">
               <span className="date">Jan 2025 – Sep 2025</span>

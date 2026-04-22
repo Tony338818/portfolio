@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Contact() {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <div className="container">
         <div className="contact">
           <div className="contact-head">
@@ -23,10 +23,10 @@ function Contact() {
             </a>
 
             <div className="contact-links">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/chidubem-tony-igwe/">
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a href="https://github.com/Tony338818">
                 <FaGithub />
               </a>
             </div>

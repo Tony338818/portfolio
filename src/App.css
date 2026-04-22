@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,10 +27,25 @@
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
 }
 
 .nav-brand {
@@ -90,6 +109,7 @@ ul.links {
       transparent 40%
     ),
     linear-gradient(135deg, #0f2027, #1c2b33);
+  padding-top: 80px;
 }
 
 .hero {
@@ -161,6 +181,9 @@ ul.links {
   max-width: 380px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
 }
 
 /* About section style */
@@ -1021,7 +1044,7 @@ ul.links {
 .footer-container {
   width: 100%;
   padding: 40px 0;
-  background:  linear-gradient(135deg, #0f2027, #1c2b33);
+  background: linear-gradient(135deg, #0f2027, #1c2b33);
   display: flex;
   justify-content: center;
 }

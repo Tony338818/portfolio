@@ -27,7 +27,7 @@ function Project() {
         "Scalable backend handling concurrent conversations in real-time",
         "Structured storage for users, orders, and chat history",
       ],
-      tech_stack: ["Python", "FastAPI", "PostgreSQL", "Twilio", "Gemini API"],
+      tech_stack: ["Python", "FastAPI", "PostgreSQL", "Twilio", "Gemini API", "React", "TypeScript"],
       github_link: "https://github.com/Tony338818/BOSS/tree/development",
       live_link: "https://tradeaid-app.netlify.app/",
     },
@@ -51,7 +51,7 @@ function Project() {
 
       tech_stack: ["Python", "FastAPI", "PostgreSQL", "Cloudinary"],
 
-      github_link: "https://github.com/yourusername/church-admin-system",
+      github_link: "",
       live_link: "",
     },
 
@@ -76,7 +76,7 @@ function Project() {
   ];
 
   return (
-    <div className="project-container">
+    <div className="project-container" id="project">
       <div className="projects">
         {/* TOP SECTION (unchanged) */}
         <div className="project-top">
@@ -91,7 +91,7 @@ function Project() {
           </div>
           <div className="top-right">
             <button className="view-all-btn">
-              View All Projects
+              {/* View All Projects */}
               <span className="btn-icon">
                 <svg
                   width="16"

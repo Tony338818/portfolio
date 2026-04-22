@@ -1,11 +1,10 @@
 import hero from '../assets/me.jpeg'
-import Navbar from '../components/navbar'
+// import Navbar from '../components/navbar'
 
 function Hero() {
   return (
-    <div className="hero-container">
+    <div className="hero-container" id='hero'>
       <div className="container">
-        <Navbar />
         <div className="hero">
           <div className="left-content">
             <h1>Hello</h1>

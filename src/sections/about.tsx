@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function About() {
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <div className="container">
         <div className="about">
           {/* LEFT */}
@@ -59,10 +59,10 @@ function About() {
             {/* CONNECT */}
             <div className="connect">
               <p>Connect with me:</p>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/chidubem-tony-igwe/">
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a href="https://github.com/Tony338818">
                 <FaGithub />
               </a>
             </div>

@@ -2,16 +2,36 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav className="navbar">
-        <div className="nav-brand">Chidubem T. Igwe</div>
+        <div className="container nav-inner">
+          <div className="nav-brand">
+            <a href="#hero">Chidubem T. Igwe</a>
+          </div>
 
-        <ul className="links">
-          <li className="nav-link">Home</li>
-          <li className="nav-link">About</li>
-          <li className="nav-link">Projects</li>
-          <li className="nav-link">Contacts</li>
-        </ul>
+          <ul className="links">
+            <li>
+              <a href="#hero" className="nav-link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="nav-link">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="nav-link">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contacts" className="nav-link">
+                Contacts
+              </a>
+            </li>
+          </ul>
 
-        <div className="menu">Menu</div>
+          <div className="menu">Menu</div>
+        </div>
       </nav>
     </div>
   );
