@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Contact() {
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container" id="contacts">
       <div className="container">
         <div className="contact">
           <div className="contact-head">

@@ -78,7 +78,7 @@ function Project() {
   ];
 
   return (
-    <div className="project-container" id="project">
+    <div className="project-container" id="projects">
       <div className="projects">
         {/* TOP SECTION (unchanged) */}
         <div className="project-top">
