@@ -29,7 +29,7 @@ function Project() {
       ],
       tech_stack: ["Python", "FastAPI", "PostgreSQL", "Twilio", "Gemini API"],
       github_link: "https://github.com/Tony338818/BOSS/tree/development",
-      live_link: "https://tradeaid-demo.com",
+      live_link: "https://tradeaid-app.netlify.app/",
     },
 
     {
