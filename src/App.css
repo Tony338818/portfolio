@@ -178,7 +178,7 @@ ul.links {
 
 .right-content img {
   width: 100%;
-  /* max-width: 380px; */
+  max-width: 380px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -515,6 +515,18 @@ ul.links {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-area {
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -1172,19 +1184,30 @@ ul.links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .contact-links a {
-  font-size: 22px;
-  color: #aaa;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  font-size: 18px;
+  transition: all 0.25s ease;
+  text-decoration: none;
 }
 
 .contact-links a:hover {
   color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: rgba(255, 107, 61, 0.08);
   transform: translateY(-3px);
 }
 
