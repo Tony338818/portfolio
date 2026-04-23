@@ -1,6 +1,6 @@
 import aboutImg from "../assets/me.jpg";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import cv from '../assets/Chidubem I.pdf'
+import cv from "../assets/Chidubem I.pdf";
 
 function About() {
   return (
@@ -60,17 +60,21 @@ function About() {
             {/* CONNECT */}
             <div className="connect">
               <p>Connect with me:</p>
-              <a href="https://www.linkedin.com/in/chidubem-tony-igwe/">
-                <FaLinkedin />
-              </a>
-              <a href="https://github.com/Tony338818">
-                <FaGithub />
-              </a>
+              <div className="connect-links">
+                <a href="https://www.linkedin.com/in/chidubem-tony-igwe/">
+                  <FaLinkedin />
+                </a>
+                <a href="https://github.com/Tony338818">
+                  <FaGithub />
+                </a>
+              </div>
             </div>
 
             {/* BUTTON */}
             <a href={cv} target="_blank" rel="noreferrer">
-              <button className="resume">Download CV <span>→</span></button>
+              <button className="resume">
+                Download CV <span>→</span>
+              </button>
             </a>
           </div>
         </div>

@@ -379,7 +379,7 @@ ul.links {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  max-width: 320px;
+  max-width: 80%;
 }
 
 .tags span {
@@ -436,20 +436,45 @@ ul.links {
 /* BUTTON */
 .connect {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.connect-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.connect-links {
+  display: flex;
   align-items: center;
-  gap: 15px;
-  margin: 25px 0;
+  gap: 12px;
 }
 
 .connect a {
-  font-size: 20px;
-  color: #aaa;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  font-size: 18px;
+  transition: all 0.25s ease;
+  text-decoration: none;
 }
 
 .connect a:hover {
   color: var(--primary-color);
-  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  background: rgba(255, 107, 61, 0.08);
+  transform: translateY(-3px);
 }
 
 .cv-btn {
@@ -472,6 +497,11 @@ ul.links {
     text-align: center;
   }
 
+  .image-area {
+    width: 350px;
+    height: 350px;
+  }
+
   .about-right p {
     margin-left: auto;
     margin-right: auto;
@@ -479,8 +509,13 @@ ul.links {
 
   .tags {
     justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
+  }
+  
+  .connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
