@@ -178,12 +178,123 @@ ul.links {
 
 .right-content img {
   width: 100%;
-  max-width: 380px;
+  /* max-width: 380px; */
   border-radius: 20px;
   object-fit: cover;
 }
 
+/* ─── TABLET (769px – 1024px) ─────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .left-content h1 {
+    font-size: 48px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .hero {
+    gap: 40px;
+  }
+
+  .right-content img {
+    max-width: 300px;
+  }
+
+  ul.links {
+    gap: 24px;
+  }
+}
+
+/* ─── MOBILE (≤ 768px) ────────────────────────────────── */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Nav */
+  ul.links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    color: white;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 40px 0 60px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .left-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left-content h1 {
+    font-size: 40px;
+  }
+
+  .left-content h3 {
+    justify-content: center;
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .left-content p {
+    margin: 16px 0 24px;
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .resume {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Image */
+  .right-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right-content img {
+    border-radius: 16px;
+  }
+}
+
+/* ─── SMALL MOBILE (≤ 480px) ─────────────────────────── */
+@media (max-width: 480px) {
+  .left-content h1 {
+    font-size: 32px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .line {
+    width: 40px;
+  }
+
+  .left-content p {
+    font-size: 14px;
+  }
+
 }
 
 /* About section style */
