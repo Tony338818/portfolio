@@ -509,7 +509,6 @@ ul.links {
 
   .tags {
     justify-content: center;
-    /* transform: translateX(-50%); */
   }
   
   .connect {
@@ -607,6 +606,7 @@ ul.links {
   color: #ff6b3d;
   font-size: 13px;
 }
+
 
 /* Project section style */
 .project-container {
@@ -835,9 +835,11 @@ ul.links {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  /* .project-card .img {
-    height: 170px;
-  } */
+  .project-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 
   .card-title {
     font-size: 15px;
