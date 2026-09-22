@@ -21,9 +21,9 @@ function Navbar() {
             <li><a href="#contacts" className="nav-link" onClick={handleNavClick}>Contacts</a></li>
           </ul>
 
-          <div className="menu" onClick={() => setIsOpen(!isOpen)}>
+          <button className="menu" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? "Close navigation" : "Open navigation"} aria-expanded={isOpen}>
             {isOpen ? <HiX /> : <HiMenu />}
-          </div>
+          </button>
         </div>
       </nav>
     </div>

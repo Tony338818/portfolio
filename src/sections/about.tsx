@@ -61,10 +61,10 @@ function About() {
             <div className="connect">
               <p>Connect with me:</p>
               <div className="connect-links">
-                <a href="https://www.linkedin.com/in/chidubem-tony-igwe/">
+                <a href="https://www.linkedin.com/in/chidubem-tony-igwe/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                   <FaLinkedin />
                 </a>
-                <a href="https://github.com/Tony338818">
+                <a href="https://github.com/Tony338818" target="_blank" rel="noreferrer" aria-label="GitHub">
                   <FaGithub />
                 </a>
               </div>
