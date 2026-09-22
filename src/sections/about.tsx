@@ -1,4 +1,4 @@
-import aboutImg from "../assets/me.jpg";
+import aboutImg from "../assets/me.jpeg";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import cv from "../assets/Chidubem I.pdf";
 
