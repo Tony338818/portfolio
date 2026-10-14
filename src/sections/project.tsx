@@ -39,14 +39,14 @@ function Project() {
       images: [tradeaidimg1, tradeaidimg],
       title: "TradeAid",
       subtitle:
-        "AI-powered WhatsApp business assistant that automates customer support, order handling, and business workflows in real-time.",
+        "AI-powered WhatsApp business assistant for customer support and order management. Frontend complete; backend integration in progress.",
       readme:
-        "TradeAid is a conversational AI system built for businesses to automate customer interactions directly via WhatsApp. It processes natural language queries, manages orders, and maintains structured conversation history using a scalable FastAPI backend and PostgreSQL database.",
+        "TradeAid is a conversational AI system built to help businesses automate customer interactions via WhatsApp. Its React and TypeScript frontend is complete and hosted on Netlify. Connecting the deployed frontend to the FastAPI and PostgreSQL backend is the remaining step before the complete application is ready to use.",
       highlights: [
-        "Automates customer interactions and reduces manual response time",
-        "AI-based intent detection and smart replies using Gemini API",
-        "Scalable backend handling concurrent conversations in real-time",
-        "Structured storage for users, orders, and chat history",
+        "Completed React and TypeScript frontend hosted on Netlify",
+        "Designed for AI-assisted WhatsApp support and order management",
+        "Backend stack includes FastAPI, PostgreSQL, Twilio, and Gemini API",
+        "Frontend-to-backend integration is the remaining launch milestone",
       ],
       tech_stack: ["Python", "FastAPI", "PostgreSQL", "Twilio", "Gemini API", "React", "TypeScript"],
       github_link: "https://github.com/Tony338818/BOSS/tree/development",
