@@ -1,99 +1,39 @@
+import { useEffect, useRef, useState } from "react";
 type ModalProps = {
-  project: {
-    image: string;
-    images?: string[];
-    title: string;
-    subtitle: string;
-    readme?: string;
-    highlights?: string[];
-    tech_stack: string[];
-    github_link?: string;
-    live_link?: string;
-  };
+  project: { image: string; images?: string[]; title: string; subtitle: string; readme?: string; highlights?: string[]; tech_stack: string[]; github_link?: string; live_link?: string; status?: string; category?: string };
   onClose: () => void;
 };
-
-function ProjectModal({ project, onClose }: ModalProps) {
-  const allImages = [project.image, ...(project.images ?? [])];
-
+export default function ProjectModal({ project, onClose }: ModalProps) {
+  const dialog = useRef<HTMLDialogElement>(null);
+  const [activeImage, setActiveImage] = useState(0);
+  const allImages = [...new Set([project.image, ...(project.images ?? [])])];
+  useEffect(() => {
+    const element = dialog.current;
+    const previousOverflow = document.body.style.overflow;
+    element?.showModal();
+    document.body.style.overflow = "hidden";
+    return () => { element?.close(); document.body.style.overflow = previousOverflow; };
+  }, []);
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>✕</button>
-
+    <dialog ref={dialog} className="project-dialog" aria-labelledby="modal-title" onCancel={onClose} onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
+      <div className="modal-shell">
+        <div className="modal-topbar"><span>PROJECT DETAILS / {project.category}</span><button className="modal-close" onClick={onClose} aria-label="Close project details" autoFocus>✕</button></div>
         <div className="modal-inner">
-
-          {/* ── LEFT: image gallery ── */}
           <div className="modal-gallery">
-            <div className="gallery-hero">
-              <img src={allImages[0]} alt={project.title} />
-            </div>
-            {allImages.length > 1 && (
-              <div className="gallery-thumbs">
-                {allImages.slice(1).map((src, i) => (
-                  <div className="gallery-thumb" key={i}>
-                    <img src={src} alt={`${project.title} screenshot ${i + 2}`} />
-                  </div>
-                ))}
-              </div>
-            )}
+            <div className="gallery-hero"><img src={allImages[activeImage]} alt={`${project.title} screenshot ${activeImage + 1}`} /></div>
+            {allImages.length > 1 && <div className="gallery-thumbs">{allImages.map((src, i) => <button className={i === activeImage ? "is-active" : ""} onClick={() => setActiveImage(i)} aria-label={`Show screenshot ${i + 1}`} aria-pressed={i === activeImage} key={src}><img src={src} alt="" /></button>)}</div>}
+            <p className="gallery-caption">{String(activeImage + 1).padStart(2, "0")} / {String(allImages.length).padStart(2, "0")} — PROJECT PREVIEW</p>
           </div>
-
-          {/* ── RIGHT: readme + meta ── */}
           <div className="modal-body">
-            <h2>{project.title}</h2>
-            <p className="modal-subtitle">{project.subtitle}</p>
-
+            <span className="modal-status">{project.status}</span><h2 id="modal-title">{project.title}</h2><p className="modal-subtitle">{project.subtitle}</p>
             <div className="modal-divider" />
-
-            {/* Mini README */}
-            {project.readme && (
-              <div className="modal-readme">
-                <h3>About this project</h3>
-                <p>{project.readme}</p>
-              </div>
-            )}
-
-            {/* Highlights */}
-            {project.highlights && (
-              <div className="modal-highlights">
-                <h3>Highlights</h3>
-                <ul>
-                  {project.highlights.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <div className="modal-divider" />
-
-            {/* Tech stack */}
-            <div className="modal-tech">
-              {project.tech_stack.map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
-            </div>
-
-            {/* Links */}
-            <div className="modal-links">
-              {project.github_link && (
-                <a href={project.github_link} target="_blank" rel="noreferrer">
-                  GitHub ↗
-                </a>
-              )}
-              {project.live_link && (
-                <a href={project.live_link} target="_blank" rel="noreferrer">
-                  Live Demo ↗
-                </a>
-              )}
-            </div>
-
+            {project.readme && <div className="modal-readme"><h3>About this project</h3><p>{project.readme}</p></div>}
+            {project.highlights && <div className="modal-highlights"><h3>What went into it</h3><ul>{project.highlights.map(item => <li key={item}>{item}</li>)}</ul></div>}
+            <div className="modal-divider" /><div className="stack">{project.tech_stack.map(tech => <span key={tech}>{tech}</span>)}</div>
+            <div className="modal-links">{project.live_link && <a className="button button-blue" href={project.live_link} target="_blank" rel="noreferrer">Live Demo ↗</a>}{project.github_link && <a className="text-link" href={project.github_link} target="_blank" rel="noreferrer">View on GitHub ↗</a>}</div>
           </div>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }
-
-export default ProjectModal;

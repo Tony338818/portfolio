@@ -1,40 +1,5 @@
+import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-
-function Contact() {
-  return (
-    <div className="contact-container" id="contacts">
-      <div className="container">
-        <div className="contact">
-          <div className="contact-head">
-            <h3>
-              <div className="line"></div>
-              <span className="name">Get In Touch</span>
-            </h3>
-          </div>
-
-          <div className="contact-body">
-            <p>
-              Have an idea, opportunity, or just want to connect? I’m always
-              open to meaningful conversations and building impactful things.
-            </p>
-
-            <a href="#" className="email-btn">
-              Send me an Email
-            </a>
-
-            <div className="contact-links">
-              <a href="https://www.linkedin.com/in/chidubem-tony-igwe/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <FaLinkedin />
-              </a>
-              <a href="https://github.com/Tony338818" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <FaGithub />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+export default function Contact() {
+  return <section className="contact-container" id="contacts" aria-labelledby="contact-title"><div className="container"><div className="section-heading"><span className="eyebrow">LET’S MAKE SOMETHING GOOD</span><h2 id="contact-title">Get in <span>touch.</span></h2><p>A project, an opportunity, or a good idea. I’d love to hear it.</p></div><div className="contact"><div className="contact-copy"><h3>Good work starts with<br />a conversation.</h3><p>Have something in mind? Let’s talk about how thoughtful engineering can bring it to life.</p><div className="contact-socials"><a href="https://www.linkedin.com/in/chidubem-tony-igwe/" target="_blank" rel="noreferrer"><FaLinkedin /> LinkedIn ↗</a><a href="https://github.com/Tony338818" target="_blank" rel="noreferrer"><FaGithub /> GitHub ↗</a></div></div><div className="contact-details"><a className="contact-method" href="mailto:chidubem.t.igwe@gmail.com"><span className="method-icon"><HiOutlineMail /></span><span><small>EMAIL ME</small><strong>chidubem.t.igwe@gmail.com</strong></span><span>↗</span></a><div className="contact-method"><span className="method-icon"><HiOutlineLocationMarker /></span><span><small>BASED IN</small><strong>London, United Kingdom</strong></span></div><a className="button button-primary contact-cta" href="mailto:chidubem.t.igwe@gmail.com">Let’s start a conversation ↗</a></div></div></div></section>;
 }
-
-export default Contact;

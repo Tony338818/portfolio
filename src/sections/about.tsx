@@ -1,86 +1,16 @@
-import aboutImg from "../assets/me.jpeg";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import cv from "../assets/Chidubem I.pdf";
-
-function About() {
-  return (
-    <div className="about-container" id="about">
-      <div className="container">
-        <div className="about">
-          {/* LEFT */}
-          <div className="about-left">
-            <div className="image-area">
-              <div className="sphere"></div>
-              <img src={aboutImg} alt="Tony" />
-            </div>
-
-            {/* TAGS BELOW IMAGE */}
-            <div className="tags">
-              <span>AI/ML</span>
-              <span>LLMs</span>
-              <span>Web Development</span>
-              <span>Backend Systems</span>
-              <span>Cloud & DevOps</span>
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div className="about-right">
-            <h4 className="section-title">— About Me</h4>
-
-            <h1>
-              Who is <span className="highlight">Tony?</span>
-            </h1>
-
-            <p>
-              It started with a terrible idea… my friends and I wanted to build
-              a game. Not play one — build one. None of us knew what we were
-              doing, but that didn’t stop us from dreaming like we were about to
-              create the next GTA.
-            </p>
-
-            <p>
-              500+ bugs later (and a lot of confusion), I found myself deep in
-              tech. What started as curiosity quickly turned into something more
-              serious, I began to see how much technology actually shapes the
-              way people live and how businesses operate.
-            </p>
-
-            <p>
-              With my background in business, my focus shifted. Now, I’m not
-              just interested in building things, I’m focused on using
-              technology to improve systems, streamline operations, and help
-              businesses work smarter.
-            </p>
-
-            <p className="ps">
-              P.S. We never built the game… but it did build my career.
-            </p>
-
-            {/* CONNECT */}
-            <div className="connect">
-              <p>Connect with me:</p>
-              <div className="connect-links">
-                <a href="https://www.linkedin.com/in/chidubem-tony-igwe/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <FaLinkedin />
-                </a>
-                <a href="https://github.com/Tony338818" target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <FaGithub />
-                </a>
-              </div>
-            </div>
-
-            {/* BUTTON */}
-            <a href={cv} target="_blank" rel="noreferrer">
-              <button className="resume">
-                Download CV <span>→</span>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+import portrait from "../assets/me.jpeg";
+import { HiOutlineCode, HiOutlineChip, HiOutlineLightBulb } from "react-icons/hi";
+import { FaUtensils, FaChalkboardTeacher } from "react-icons/fa";
+import { HiOutlinePuzzle } from "react-icons/hi";
+export default function About() {
+  return <section className="about-container" id="about" aria-labelledby="about-title"><div className="container">
+    <div className="section-heading"><span className="eyebrow">THE PERSON BEHIND THE CODE</span><h2 id="about-title">About <span>me.</span></h2><p>Understanding systems. Building things that help.</p></div>
+    <div className="about"><div className="about-portrait"><img src={portrait} alt="Tony Igwe" loading="lazy" /><span>BSc graduate · Middlesex University<br /><strong>First Class Honours</strong></span></div>
+    <div className="about-story"><h3 className="gradient-text">I’m Chidubem Tony Igwe.</h3>
+    <p>I recently graduated from Middlesex University London with a BSc in Information Technology and Business Information Systems. Before university, I studied Software Engineering at Aptech in Lagos, where I developed my interest in backend engineering and how systems work behind the scenes.</p>
+    <p>Since then, I’ve worked mainly with Python, FastAPI, Java, and Spring Boot. On TradeAid, a WhatsApp-based business assistant, I worked across the APIs, PostgreSQL database, Redis, and NLP components. It gave me the chance to think about how the different parts of a system work together.</p>
+    <p>I want to build things that are useful to people. I’m looking for an environment where I can contribute to meaningful problems at scale, learn from experienced engineers, and keep growing as a software engineer.</p>
+    <div className="specialties"><div><HiOutlineCode /><span>Backend engineering & API development</span></div><div><HiOutlineChip /><span>NLP & business automation</span></div><div><HiOutlineLightBulb /><span>Understanding how systems work together</span></div></div></div></div>
+    <div className="personal-interests"><div className="interests-intro"><span className="eyebrow">BEYOND THE CODE</span><h3>A little more about me.</h3></div><div className="interest"><FaUtensils aria-hidden="true" /><h4>Cooking</h4><p>I enjoy spending time in the kitchen and making something good to share.</p></div><div className="interest"><HiOutlinePuzzle aria-hidden="true" /><h4>Sudoku</h4><p>A favourite train companion. There’s something satisfying about solving a good puzzle.</p></div><div className="interest"><FaChalkboardTeacher aria-hidden="true" /><h4>Teaching & sharing</h4><p>From programming to faith and personal development, I enjoy sharing things that could help someone else.</p></div></div>
+  </div></section>;
 }
-
-export default About;

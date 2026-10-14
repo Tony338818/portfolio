@@ -4,55 +4,27 @@ type Props = {
   title: string;
   subtitle: string;
   live_link?: string;
+  github_link?: string;
+  category: string;
+  status: string;
+  accent: string;
+  number: number;
   onClick: () => void;
 };
-
-
-function ProjectCard({ image, tech_stack, title, subtitle, live_link, onClick }: Props) {
+export default function ProjectCard({ image, tech_stack, title, subtitle, live_link, github_link, category, status, accent, number, onClick }: Props) {
   return (
-    <div className="project-card-container">
-      <article className="project-card" onClick={onClick}>
-        <div className="img">
-          <img src={image} alt={title} />
-        </div>
-
-        <div className="card-body">
-          <div className="stack">
-            {tech_stack.map((tech) => <span key={tech} className="tag">{tech}</span>)}
-          </div>
-
-          <div className="card-footer">
-            <div className="card-footer-left">
-              <h2 className="card-title">{title}</h2>
-              <h2 className="card-subtitle">{subtitle}</h2>
-              {live_link && (
-                <a
-                  className="card-live-link"
-                  href={live_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => event.stopPropagation()}
-                  aria-label={`Open ${title} live demo`}
-                >
-                  Live Demo ↗
-                </a>
-              )}
-            </div>
-
-            <button
-              className="card-arrow-btn"
-              onClick={(event) => { event.stopPropagation(); onClick(); }}
-              aria-label={`View ${title} project details`}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </article>
-    </div>
+    <article className={`project-card project-${accent}`}>
+      <button className="project-preview" onClick={onClick} aria-label={`View ${title} project details`}>
+        <span className="preview-topline"><span>PROJECT / {String(number).padStart(2, "0")}</span><span>{category}</span></span>
+        <span className="browser-frame"><span className="browser-chrome"><span className="browser-dots"><i /><i /><i /></span><span>{live_link ? new URL(live_link).hostname : title}</span><span>↗</span></span><img src={image} alt={`${title} screenshot`} loading="lazy" /></span>
+        <span className="preview-open" aria-hidden="true">↗</span>
+      </button>
+      <div className="project-info">
+        <div className="project-meta"><span>{category}</span><span className={live_link ? "project-status has-live" : "project-status"}><i />{status}</span></div>
+        <h3>{title}</h3><p>{subtitle}</p>
+        <div className="stack">{tech_stack.map(tech => <span key={tech}>{tech}</span>)}</div>
+        <div className="project-actions"><button onClick={onClick}>Explore project <span>↗</span></button><div>{github_link && <a href={github_link} target="_blank" rel="noreferrer" aria-label={`View ${title} source on GitHub`}>GitHub ↗</a>}{live_link && <a className="live-demo" href={live_link} target="_blank" rel="noreferrer" aria-label={`Open ${title} live demo`}>Live Demo ↗</a>}</div></div>
+      </div>
+    </article>
   );
 }
-
-export default ProjectCard

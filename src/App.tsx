@@ -6,16 +6,20 @@ import Footer from "./sections/footer";
 import Hero from "./sections/hero";
 import Journey from "./sections/journey";
 import Project from "./sections/project";
+import Skills from "./sections/skills";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <main id="main">
       <Hero />
       <About />
-      <Journey />
+      <Skills />
       <Project />
+      <Journey />
       <Contact />
+      </main>
       <Footer />
     </div>
   );
