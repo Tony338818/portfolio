@@ -3,11 +3,12 @@ type Props = {
   tech_stack: string[];
   title: string;
   subtitle: string;
+  live_link?: string;
   onClick: () => void;
 };
 
 
-function ProjectCard({ image, tech_stack, title, subtitle, onClick }: Props) {
+function ProjectCard({ image, tech_stack, title, subtitle, live_link, onClick }: Props) {
   return (
     <div className="project-card-container">
       <article className="project-card" onClick={onClick}>
@@ -24,6 +25,18 @@ function ProjectCard({ image, tech_stack, title, subtitle, onClick }: Props) {
             <div className="card-footer-left">
               <h2 className="card-title">{title}</h2>
               <h2 className="card-subtitle">{subtitle}</h2>
+              {live_link && (
+                <a
+                  className="card-live-link"
+                  href={live_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(event) => event.stopPropagation()}
+                  aria-label={`Open ${title} live demo`}
+                >
+                  Live Demo ↗
+                </a>
+              )}
             </div>
 
             <button

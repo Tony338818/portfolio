@@ -89,6 +89,8 @@ button,a { font:inherit; } button { color:inherit; } a { color:inherit; } img { 
 .stack { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:28px; }
 .card-footer { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; }
 .card-footer-left { flex:1; }
+.card-live-link { display:inline-block; margin-top:14px; color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:4px; }
+.card-live-link:hover { color:var(--text); }
 .card-footer .card-title { margin:0 0 8px; color:var(--text); font-family:var(--display); font-size:22px; letter-spacing:-.02em; }
 .card-subtitle { color:var(--muted); font-size:13px; font-weight:400; line-height:1.55; }
 .card-arrow-btn { flex:0 0 42px; width:42px; height:42px; display:grid; place-items:center; border:1px solid var(--line-strong); border-radius:50%; background:transparent; cursor:pointer; transition:background .2s,color .2s,transform .2s; }
