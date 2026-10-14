@@ -8,6 +8,7 @@ import miniapiimg2 from "../assets/mini_api_2.png";
 import miniapiimg3 from "../assets/mini_api_3.png";
 import church from '../assets/church.png'
 import church1 from '../assets/church_1.png'
+import tvsmimg from '../assets/tvsm.png'
 import { useState } from "react";
 
 function Project() {
@@ -15,6 +16,24 @@ function Project() {
     (typeof projects)[0] | null
   >(null);
   const projects = [
+    {
+      image: tvsmimg,
+      images: [],
+      title: "The Vision Spire Ministry (TVSM)",
+      subtitle:
+        "A public ministry website connecting visitors with church services, events, and community life.",
+      readme:
+        "A multi-page website built for The Vision Spire Ministry to introduce the church, share service schedules and events, and help new visitors plan their first visit. The site brings ministry information, a community gallery, and contact details together in one accessible online presence.",
+      highlights: [
+        "Dedicated pages for the ministry, services, events, and gallery",
+        "Visitor information and clear pathways to plan a first visit",
+        "Video-led homepage with service schedules and visitor FAQs",
+        "Live website hosted on Netlify",
+      ],
+      tech_stack: ["Netlify"],
+      github_link: "",
+      live_link: "https://visionspireministyweb.netlify.app/index.html",
+    },
     {
       image: tradeaidimg,
       images: [tradeaidimg1, tradeaidimg],
