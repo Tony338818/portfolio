@@ -61,14 +61,14 @@ function Project() {
     {
       image: tradeaidLive,
       images: [tradeaidimg, tradeaidimg],
-      title: "TradeAid",
+      title: "Kora",
       category: "AI & Applications",
       status: "Frontend live · Integration pending",
       accent: "green",
       subtitle:
         "AI-powered WhatsApp business assistant for customer support and order management. Frontend complete; backend integration in progress.",
       readme:
-        "TradeAid is a WhatsApp-based business assistant. I worked across most of its backend, including the APIs, PostgreSQL database, Redis, and NLP components, thinking through how the services work together to support business workflows. The React and TypeScript frontend is complete and hosted on Netlify; connecting it to the backend is the remaining launch step.",
+        "Kora is a WhatsApp-based business assistant. I worked across most of its backend, including the APIs, PostgreSQL database, Redis, and NLP components, thinking through how the services work together to support business workflows. The React and TypeScript frontend is complete and hosted on Netlify; connecting it to the backend is the remaining launch step.",
       highlights: [
         "Completed React and TypeScript frontend hosted on Netlify",
         "Designed for AI-assisted WhatsApp support and order management",
