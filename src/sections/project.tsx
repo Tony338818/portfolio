@@ -1,7 +1,6 @@
 import ProjectCard from "../components/project_card";
 import ProjectModal from "../components/project_modal";
-import tradeaidimg from "../assets/tradeaid_1.png";
-import tradeaidimg1 from "../assets/tradeaid_3.png";
+import tradeaidimg from "../assets/tradeaid_2.png";
 import tradeaidLive from "../assets/tradeaid_live.png";
 import miniapiimg from "../assets/mini_api.png";
 import miniapiimg1 from "../assets/mini_api_1.png";
@@ -61,7 +60,7 @@ function Project() {
     },
     {
       image: tradeaidLive,
-      images: [tradeaidimg1, tradeaidimg],
+      images: [tradeaidimg, tradeaidimg],
       title: "TradeAid",
       category: "AI & Applications",
       status: "Frontend live · Integration pending",
